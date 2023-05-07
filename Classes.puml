@@ -1,0 +1,18 @@
+@startuml
+class BP_Block {
+    +DoSpawnObstacles : Boolean
+    +CheckFrontBlock() : BP_Block
+    +MoveCars()
+    +SpawnObstacles()
+} 
+
+class BP_ThirdPersonGameMode {
+    +AddBlock(DoSpawnObstacles : Boolean)
+}
+
+Object <|-- Actor
+Actor  <|-- GameModeBase
+Actor  <|-- BP_ThirdPersonCharacter
+Actor  <|-- BP_Block
+GameModeBase <|-- BP_ThirdPersonGameMode
+@enduml
