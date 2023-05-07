@@ -23,4 +23,5 @@ Actor  <|-- GameModeBase
 Actor  <|-- BP_ThirdPersonCharacter
 Actor  <|-- BP_Block
 GameModeBase <|-- BP_ThirdPersonGameMode
+BP_ThirdPersonGameMode--BP_Block : > spawns
 @enduml
