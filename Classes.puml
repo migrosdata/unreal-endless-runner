@@ -1,5 +1,7 @@
 @startuml
 class BP_Block {
+    -BeginPlay()
+    -OnComponentBeginOverlap()
     +DoSpawnObstacles : Boolean
     +CheckFrontBlock() : BP_Block
     +MoveCars()
@@ -7,8 +9,14 @@ class BP_Block {
 } 
 
 class BP_ThirdPersonGameMode {
+    -BeginPlay()
     +AddBlock(DoSpawnObstacles : Boolean)
 }
+
+class BP_ThirdPersonCharacter {
+    -BeginPlay()
+}
+
 
 Object <|-- Actor
 Actor  <|-- GameModeBase
