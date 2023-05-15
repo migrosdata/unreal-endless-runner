@@ -20,8 +20,10 @@ class BP_ThirdPersonCharacter {
 
 Object <|-- Actor
 Actor  <|-- GameModeBase
-Actor  <|-- BP_ThirdPersonCharacter
+Character <|-- BP_ThirdPersonCharacter
+Pawn <|-- Character
+Actor  <|-- Pawn
 Actor  <|-- BP_Block
 GameModeBase <|-- BP_ThirdPersonGameMode
-BP_ThirdPersonGameMode--BP_Block : > spawns
+BP_ThirdPersonGameMode--BP_Block : > spawns from class
 @enduml
